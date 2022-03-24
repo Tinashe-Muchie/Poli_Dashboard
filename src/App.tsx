@@ -1,10 +1,20 @@
 import "./styles.css";
+import { LEFT_SIDEBAR } from "./Components/index";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="container">
+      <section className="left-sidebar">
+        <LEFT_SIDEBAR />
+      </section>
+      <section className="search-bar"></section>
+      <section className="overview"></section>
+      <section className="staff_info"></section>
+      <section className="patient_covid_stats"></section>
+      <section className="gender_patient"></section>
+      <section className="group_patient"></section>
+      <section className="informations"></section>
+      <section className="poly_division"></section>
     </div>
   );
 }

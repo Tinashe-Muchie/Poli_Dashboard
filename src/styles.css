@@ -1,4 +1,97 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+:root {
+ box-sizing: border-box;
+ --background-blue: rgba(205, 209, 228);
+ --button-blue: rgba(72, 113, 247);
+}
+
+*, 
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--background-blue);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: .5em;
+}
+
+.left-sidebar {
+  grid-column: 1/2;
+  grid-row: 1/6;
+}
+
+.search-bar {
+  grid-column:2/5;
+  grid-row: 1/2;
+}
+
+.overview {
+  grid-column: 2/5;
+  grid-row: 2/3;
+}
+
+.staff_info {
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+
+.patient_covid_stats {
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+
+.gender_patient {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+
+.group_patient {
+  grid-column: 3/4;
+  grid-row: 5/6;
+}
+
+.informations {
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+.poly_division {
+  grid-column: 4/5;
+  grid-row: 5/6;
+}
+
+.sidebar_wrapper {
+  padding: 1em;
+}
+
+.sidebar_heading {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sidebar_heading  span:first-of-type {
+  margin-right: .3em;
+}
+
+.sidebar_heading span:last-of-type {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar_management h2 {
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: normal;
 }
