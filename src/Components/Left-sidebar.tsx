@@ -64,20 +64,28 @@ const support_list: list_if[] = [
 ];
 
 const management = managements_list.map((item) => (
-  <li key={item.id}>
+  <li key={item.id} className="list_style">
+    <a href={`/hello`}>
     <span> {item.icon} </span>
     <span> {item.title} </span>
+    </a>
   </li>
 ));
 
 const support = support_list.map((item) => (
-  <li key={item.id}>
+  <li key={item.id} className="list_style">
+    <a href={`/hello`}>
     <span> {item.icon} </span>
     <span> {item.title} </span>
+    </a>
+    
   </li>
 ));
 
 export const LEFT_SIDEBAR = () => {
+
+  const date = new Date();
+  const current_year = date.getFullYear();
   return (
     <div className="sidebar_wrapper">
       <div className="sidebar_heading">
@@ -91,12 +99,20 @@ export const LEFT_SIDEBAR = () => {
         <h2> Managements </h2>
         <ul> {management}</ul>
       </div>
-      <div>
+      <div className="sidebar_management">
         <h2> support </h2>
         <ul> {support} </ul>
       </div>
-      <div>
-        <h2> Covid Informations </h2>
+      <div className="sidebar_tile">
+        <span> Covid Informations </span>
+      </div>
+      <div className="sidebar_footer">
+        <span>
+         &copy; Poli Clinic. {current_year}
+        </span>
+        <span>
+          Poli Clinic is medical management for all doctors, patients and stuff.
+        </span>
       </div>
     </div>
   );

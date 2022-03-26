@@ -86,11 +86,12 @@ body {
 }
 
 .sidebar_heading span:first-of-type {
-  margin-right: 0.3em;
+  margin-right: 0.1em;
+  font-size: 0.8em;
 }
 
 .sidebar_heading span:last-of-type {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -99,8 +100,68 @@ ul {
   list-style-type: none;
 }
 
+.sidebar_management {
+  padding: 0.5em;
+}
+
 .sidebar_management h2 {
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: normal;
+}
+
+.sidebar_management > ul {
+  font-size: 0.8rem;
+}
+
+.sidebar_wrapper .sidebar_tile {
+  background-color: var(--background-blue);
+  border: hidden;
+  border-radius: 0.4em;
+  min-height: 20vh;
+  color: black;
+  padding: 0.3em;
+}
+
+.sidebar_wrapper .sidebar_tile > span {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.sidebar_wrapper .sidebar_footer {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  border: 1em solid var(--left_sidebar_font);
+}
+
+.sidebar_wrapper .sidebar_footer span:first-of-type {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: black;
+}
+
+.list_style {
+  padding-bottom: 0.5em;
+  vertical-align: middle;
+}
+
+.list_style > a {
+  text-decoration: none;
+  color: var(--left-sidebar-font);
+}
+
+.list_style > a:hover {
+  display: block;
+  color: var(--button-blue);
+}
+
+.list_style span:first-of-type {
+  font-size: 0.7rem;
+  margin-right: 0.5em;
+}
+
+.list_style span:last-of-type {
+  font-size: 0.9rem;
 }
