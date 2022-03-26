@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
 :root {
- box-sizing: border-box;
- --background-blue: rgba(205, 209, 228);
- --button-blue: rgba(72, 113, 247);
- --left-sidebar-font: rgba(149, 165, 166);
+  box-sizing: border-box;
+  --background-blue: rgba(205, 209, 228);
+  --button-blue: rgba(72, 113, 247);
+  --left-sidebar-font: rgba(149, 165, 166);
 }
 
-*, 
+*,
 ::before,
 ::after {
   box-sizing: inherit;
@@ -14,14 +16,14 @@
 body {
   margin: 0;
   background-color: var(--background-blue);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr;
   grid-template-rows: repeat(5, auto);
-  grid-gap: .5em;
+  grid-gap: 0.5em;
 }
 
 .left-sidebar {
@@ -30,7 +32,7 @@ body {
 }
 
 .search-bar {
-  grid-column:2/5;
+  grid-column: 2/5;
   grid-row: 1/2;
 }
 
@@ -83,8 +85,8 @@ body {
   color: var(--button-blue);
 }
 
-.sidebar_heading  span:first-of-type {
-  margin-right: .3em;
+.sidebar_heading span:first-of-type {
+  margin-right: 0.3em;
 }
 
 .sidebar_heading span:last-of-type {
@@ -99,6 +101,6 @@ ul {
 
 .sidebar_management h2 {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: normal;
 }
