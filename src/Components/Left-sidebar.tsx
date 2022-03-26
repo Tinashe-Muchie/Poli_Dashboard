@@ -10,6 +10,7 @@ import {
   FaRegDotCircle
 } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
+import { BiWorld } from "react-icons/bi";
 
 interface list_if {
   id: number;
@@ -66,8 +67,8 @@ const support_list: list_if[] = [
 const management = managements_list.map((item) => (
   <li key={item.id} className="list_style">
     <a href={`/hello`}>
-    <span> {item.icon} </span>
-    <span> {item.title} </span>
+      <span> {item.icon} </span>
+      <span> {item.title} </span>
     </a>
   </li>
 ));
@@ -75,15 +76,13 @@ const management = managements_list.map((item) => (
 const support = support_list.map((item) => (
   <li key={item.id} className="list_style">
     <a href={`/hello`}>
-    <span> {item.icon} </span>
-    <span> {item.title} </span>
+      <span> {item.icon} </span>
+      <span> {item.title} </span>
     </a>
-    
   </li>
 ));
 
 export const LEFT_SIDEBAR = () => {
-
   const date = new Date();
   const current_year = date.getFullYear();
   return (
@@ -105,11 +104,19 @@ export const LEFT_SIDEBAR = () => {
       </div>
       <div className="sidebar_tile">
         <span> Covid Informations </span>
+        <div>
+          <span>
+            <BiWorld />
+          </span>
+          <span>World</span>
+        </div>
+        <span>Infected -</span>
+        <span>Recovered -</span>
+        <span>Death -</span>
+        <button>Check Covid</button>
       </div>
       <div className="sidebar_footer">
-        <span>
-         &copy; Poli Clinic. {current_year}
-        </span>
+        <span>&copy; Poli Clinic. {current_year}</span>
         <span>
           Poli Clinic is medical management for all doctors, patients and stuff.
         </span>

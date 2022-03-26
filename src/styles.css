@@ -115,16 +115,41 @@ ul {
 }
 
 .sidebar_wrapper .sidebar_tile {
+  display: flex;
+  flex-direction: column;
   background-color: var(--background-blue);
   border: hidden;
   border-radius: 0.4em;
   min-height: 20vh;
   color: black;
-  padding: 0.3em;
+  padding: 0.4em;
 }
 
 .sidebar_wrapper .sidebar_tile > span {
   font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+.sidebar_wrapper .sidebar_tile div {
+  font-size: 0.9rem;
+  margin-bottom: 0.4em;
+  vertical-align: middle;
+  color: var(--button-blue);
+  font-weight: bold;
+}
+
+.sidebar_wrapper .sidebar_tile div > span:first-of-type {
+  font-size: 0.6rem;
+}
+
+.sidebar_wrapper .sidebar_tile button {
+  background-color: var(--button-blue);
+  color: ivory;
+  border: hidden;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -133,7 +158,6 @@ ul {
   display: flex;
   flex-direction: column;
   font-size: 0.6rem;
-  border: 1em solid var(--left_sidebar_font);
 }
 
 .sidebar_wrapper .sidebar_footer span:first-of-type {
