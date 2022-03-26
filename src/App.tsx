@@ -1,5 +1,6 @@
 import "./styles.css";
 import { LEFT_SIDEBAR } from "./Components/index";
+import { SEARCH_BAR } from "./Components/index";
 
 export default function App() {
   return (
@@ -7,7 +8,9 @@ export default function App() {
       <section className="left-sidebar">
         <LEFT_SIDEBAR />
       </section>
-      <section className="search-bar"></section>
+      <section className="search-bar">
+        <SEARCH_BAR />
+      </section>
       <section className="overview"></section>
       <section className="staff_info"></section>
       <section className="patient_covid_stats"></section>

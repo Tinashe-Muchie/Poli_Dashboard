@@ -1,5 +1,5 @@
 export { LEFT_SIDEBAR } from "./Left-sidebar";
-export { Search_Bar } from "./Search-bar";
+export { SEARCH_BAR } from "./Search-bar";
 export { Information } from "./Right-sidebar/Informations";
 export { Poly_Division } from "./Right-sidebar/PolyclinicDivision";
 export { Gender_Patient } from "./Main/GenderPatient";

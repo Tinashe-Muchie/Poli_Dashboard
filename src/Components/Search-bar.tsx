@@ -1,3 +1,3 @@
-export const Search_Bar = () => {
+export const SEARCH_BAR = () => {
   return <></>;
 };
