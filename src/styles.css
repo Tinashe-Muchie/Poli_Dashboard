@@ -2,6 +2,7 @@
  box-sizing: border-box;
  --background-blue: rgba(205, 209, 228);
  --button-blue: rgba(72, 113, 247);
+ --left-sidebar-font: rgba(149, 165, 166);
 }
 
 *, 
@@ -11,6 +12,7 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--background-blue);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -68,12 +70,17 @@ body {
 }
 
 .sidebar_wrapper {
+  margin: 0;
   padding: 1em;
+  background-color: #fff;
+  min-height: 100vh;
+  color: var(--left-sidebar-font);
 }
 
 .sidebar_heading {
   display: inline-block;
   vertical-align: middle;
+  color: var(--button-blue);
 }
 
 .sidebar_heading  span:first-of-type {
