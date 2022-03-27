@@ -1,4 +1,4 @@
-import { FaRegBell } from "react-icons/fa";
+import { FaRegBell, FaUser } from "react-icons/fa";
 
 export const SEARCH_BAR = () => {
   return (
@@ -15,10 +15,14 @@ export const SEARCH_BAR = () => {
         <div className="Search_bar_bell">
           <FaRegBell />
         </div>
-        <div>
-          <span></span>
-          <span>Tendai Kutswa</span>
-          <span>Admin Manager</span>
+        <div className="Admin_info">
+          <div>
+            <FaUser />
+          </div>
+          <div>
+            <span>Tendai Kutswa</span>
+            <span>Admin Manager</span>
+          </div>
         </div>
       </div>
     </div>

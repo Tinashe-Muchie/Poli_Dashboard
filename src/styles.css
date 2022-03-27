@@ -220,3 +220,48 @@ ul {
 .Search_bar_wrapper form > select > option {
   color: var(--left-sidebar-font);
 }
+
+.Search_bar_wrapper > div {
+  display: flex;
+  align-items: center;
+}
+
+.Search_bar_wrapper > div .Search_bar_bell {
+  background-color: var(--background-blue);
+  border: hidden;
+  border-radius: 50%;
+  padding: 0.4em;
+  margin-right: 0.4em;
+  color: var(--button-blue);
+}
+
+.Search_bar_wrapper > div .Admin_info {
+  display: flex;
+  background-color: var(--background-blue);
+  padding: 0.5em;
+  border: hidden;
+  border-radius: 0.5em;
+  margin-right: 0.6em;
+}
+
+.Search_bar_wrapper > div .Admin_info div:first-of-type {
+  background-color: var(--left-sidebar-font);
+  padding: 0.2em;
+  border: hidden;
+  border-radius: 50%;
+  margin-right: 0.2em;
+}
+
+.Search_bar_wrapper > div .Admin_info div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+}
+
+.Search_bar_wrapper > div .Admin_info div:last-of-type span:first-of-type {
+  font-weight: bold;
+}
+
+.Search_bar_wrapper > div .Admin_info div:last-of-type span:last-of-type {
+  color: var(--left-sidebar-font);
+}
