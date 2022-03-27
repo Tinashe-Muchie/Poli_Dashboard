@@ -151,6 +151,7 @@ ul {
   border-radius: 0.2em;
   font-size: 0.8rem;
   font-weight: bold;
+  box-shadow: 0em 0.2em 0.2em rgba(82, 78, 183);
 }
 
 .sidebar_wrapper .sidebar_footer {
@@ -264,4 +265,35 @@ ul {
 
 .Search_bar_wrapper > div .Admin_info div:last-of-type span:last-of-type {
   color: var(--left-sidebar-font);
+}
+
+.Overview_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.Overview_wrapper > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.Overview_wrapper > div span:first-of-type {
+  font-weight: bolder;
+}
+
+.Overview_wrapper > div span:last-of-type {
+  color: var(--left-sidebar-font);
+}
+
+.Overview_wrapper button {
+  padding: 0.8em 2em;
+  background-color: var(--button-blue);
+  border: hidden;
+  color: ivory;
+  box-shadow: 0em 0.4em 0.2em rgba(82, 78, 183);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
