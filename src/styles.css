@@ -189,3 +189,34 @@ ul {
 .list_style span:last-of-type {
   font-size: 0.9rem;
 }
+
+.Search_bar_wrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Search_bar_wrapper form {
+  display: flex;
+  padding: 0.5em;
+}
+
+.Search_bar_wrapper form > input {
+  padding: 0.7em;
+  font-size: 0.9rem;
+  border: 0.1em solid var(--left-sidebar-font);
+  border-bottom-left-radius: 5em;
+  border-top-left-radius: 5em;
+}
+
+.Search_bar_wrapper form > select {
+  border: 0.1em solid var(--left-sidebar-font);
+  border-bottom-right-radius: 5em;
+  border-top-right-radius: 5em;
+  padding: 0.7em;
+  font-weight: bold;
+}
+
+.Search_bar_wrapper form > select > option {
+  color: var(--left-sidebar-font);
+}
