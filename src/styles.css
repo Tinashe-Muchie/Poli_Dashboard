@@ -308,13 +308,13 @@ ul {
   display: flex;
   align-items: center;
   background-color: #fff;
-  padding: 0.7em;
+  padding: 0.7em 2.5em;
   border: hidden;
   border-radius: 0.3em;
 }
 
 .staff_info_list > span {
-  padding: 0.3em;
+  padding: 0.3em 0.5em;
   border: hidden;
   border-radius: 0.2em;
   background-color: rgba(253, 227, 167);
@@ -326,5 +326,19 @@ ul {
 }
 
 .staff_info_list:last-child > span {
-  background-color: rgba();
+  background-color: var(--background-blue);
+  color: rgba(44, 130, 201);
+}
+
+.staff_info_list > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  padding: 0.4em;
+}
+
+.staff_info_list > div > span:last-of-type {
+  font-weight: bold;
+  padding-top: 0.5em;
+  font-size: 0.9rem;
 }
