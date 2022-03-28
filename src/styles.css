@@ -297,3 +297,34 @@ ul {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+.staff_info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.staff_info_list {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.7em;
+  border: hidden;
+  border-radius: 0.3em;
+}
+
+.staff_info_list > span {
+  padding: 0.3em;
+  border: hidden;
+  border-radius: 0.2em;
+  background-color: rgba(253, 227, 167);
+  color: rgba(235, 149, 50);
+}
+.staff_info_list:first-child > span {
+  background-color: rgba(200, 247, 197);
+  color: rgba(46, 204, 113);
+}
+
+.staff_info_list:last-child > span {
+  background-color: rgba();
+}
