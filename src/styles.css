@@ -195,6 +195,7 @@ ul {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  border-bottom-left-radius: .5em;
 }
 
 .Search_bar_wrapper form {
