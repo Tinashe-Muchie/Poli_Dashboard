@@ -195,7 +195,7 @@ ul {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  border-bottom-left-radius: .5em;
+  border-bottom-left-radius: 0.5em;
 }
 
 .Search_bar_wrapper form {
@@ -342,4 +342,45 @@ ul {
   font-weight: bold;
   padding-top: 0.5em;
   font-size: 0.9rem;
+}
+
+.patient_stats_wrapper {
+  background-color: #fff;
+  padding: 0.8em;
+  border: hidden;
+  border-radius: 0.5em;
+}
+
+.patient_stats_wrapper > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.patient_stats_wrapper > div > span {
+  font-weight: bold;
+}
+
+.patient_stats_wrapper > div > div {
+  background-color: var(--background-blue);
+  padding: 0.5em;
+  border: hidden;
+  border-radius: 0.4em;
+}
+
+.patient_stats_wrapper > div > div > a {
+  text-decoration: none;
+  padding: 0.2em 0.8em;
+  margin: 0.1em;
+  border: hidden;
+  border-radius: 0.2em;
+  color: var(--left-sidebar-font);
+}
+
+.patient_stats_wrapper > div > div > a:hover,
+a:active {
+  background-color: #fff;
+  color: var(--button-blue);
+  font-weight: bold;
 }
