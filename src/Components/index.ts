@@ -5,5 +5,5 @@ export { Poly_Division } from "./Right-sidebar/PolyclinicDivision";
 export { Gender_Patient } from "./Main/GenderPatient";
 export { Group_Patient } from "./Main/GroupPatient";
 export { OVERVIEW } from "./Main/Overview";
-export { Patient_Stats } from "./Main/PatientCovidStats";
+export { PATIENT_STATS } from "./Main/PatientCovidStats";
 export { STAFF_INFO } from "./Main/StaffInfo";

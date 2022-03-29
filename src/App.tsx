@@ -2,6 +2,7 @@ import "./styles.css";
 import {
   LEFT_SIDEBAR,
   OVERVIEW,
+  PATIENT_STATS,
   SEARCH_BAR,
   STAFF_INFO
 } from "./Components/index";
@@ -21,7 +22,9 @@ export default function App() {
       <section className="staff_info">
         <STAFF_INFO />
       </section>
-      <section className="patient_covid_stats"></section>
+      <section className="patient_covid_stats">
+        <PATIENT_STATS />
+      </section>
       <section className="gender_patient"></section>
       <section className="group_patient"></section>
       <section className="informations"></section>
