@@ -384,3 +384,7 @@ a:active {
   color: var(--button-blue);
   font-weight: bold;
 }
+
+.patient_stats_wrapper .chart {
+  padding: 0.5em;
+}

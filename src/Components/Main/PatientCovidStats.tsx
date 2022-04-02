@@ -95,7 +95,9 @@ export const PATIENT_STATS = () => {
           <a href="/#">Weekly</a>
         </div>
       </div>
-      <Line data={data} options={options} />
+      <div className="chart">
+        <Line data={data} options={options} />
+      </div>
     </div>
   );
 };
