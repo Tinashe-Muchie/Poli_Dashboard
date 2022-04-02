@@ -10,7 +10,6 @@ import {
   Legend
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { FaBlackTie, FaRegIdBadge } from "react-icons/fa";
 
 ChartJS.register(
   CategoryScale,
@@ -24,13 +23,23 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
+  scales: {
+    yAxis: {
+      ticks: {
+        min: 0,
+        max: 100,
+        stepSize: 20
+      }
+    }
+  },
   plugins: {
     legend: {
       title: {},
       position: "top" as const,
       labels: {
         boxWidth: 10,
-        boxHeight: 10
+        boxHeight: 10,
+        color: "rgba(149, 165, 166)"
       }
     },
     title: {
@@ -59,10 +68,11 @@ export const data = {
     {
       label: "Positive Covid",
       data: [20, 44, 46, 72, 58, 38, 60, 54, 55, 82, 62, 34],
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "rgba(15, 10, 222)",
+      backgroundColor: "rgba(15, 10, 222)",
       borderWidth: 0.5,
-      tension: 0.4
+      tension: 0.4,
+      pointBackgroundColor: "rgba(15, 10, 222)"
     },
     {
       label: "Recovered ",
