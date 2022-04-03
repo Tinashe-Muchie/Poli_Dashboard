@@ -1,5 +1,3 @@
 export const INFORMATION = () => {
-  return (
-    
-  );
+  return <div className="information_wrapper"></div>;
 };
