@@ -391,8 +391,31 @@ a:active {
 
 .patients_wrapper {
   background-color: #fff;
-  padding: .8em;
+  padding: 0.8em;
   border: hidden;
-  border-radius: .5em;
-  font-size: .8rem;
+  border-radius: 0.5em;
+  font-size: 0.8rem;
+}
+
+.patients_wrapper > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.patients_wrapper > div span:first-of-type {
+  font-weight: bold;
+}
+
+.patients_wrapper > div span:last-of-type {
+  border: 0.1em solid var(--left-sidebar-font);
+  padding: 0.2em;
+  border-radius: 0.3em;
+  color: var(--left-sidebar-font);
+}
+
+.patients_wrapper > div:last-of-type {
+  max-width: 20em;
+  padding: 1em;
+  margin-top: 1em;
 }

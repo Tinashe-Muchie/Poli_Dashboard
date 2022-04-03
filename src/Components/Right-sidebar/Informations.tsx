@@ -1,3 +1,5 @@
-export const Information = () => {
-  return <></>;
+export const INFORMATION = () => {
+  return (
+    
+  );
 };

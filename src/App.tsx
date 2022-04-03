@@ -1,6 +1,7 @@
 import "./styles.css";
 import {
   GENDER_PATIENT,
+  GROUP_PATIENT,
   LEFT_SIDEBAR,
   OVERVIEW,
   PATIENT_STATS,
@@ -30,7 +31,7 @@ export default function App() {
         <GENDER_PATIENT />
       </section>
       <section className="group_patient">
-        <GENDER_PATIENT />
+        <GROUP_PATIENT />
       </section>
       <section className="informations"></section>
       <section className="poly_division"></section>
