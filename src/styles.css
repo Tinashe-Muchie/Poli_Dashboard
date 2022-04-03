@@ -386,5 +386,13 @@ a:active {
 }
 
 .patient_stats_wrapper .chart {
-  padding: 0.5em;
+  padding: 1.5em;
+}
+
+.patients_wrapper {
+  background-color: #fff;
+  padding: .8em;
+  border: hidden;
+  border-radius: .5em;
+  font-size: .8rem;
 }

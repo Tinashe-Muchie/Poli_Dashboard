@@ -1,5 +1,6 @@
 import "./styles.css";
 import {
+  GENDER_PATIENT,
   LEFT_SIDEBAR,
   OVERVIEW,
   PATIENT_STATS,
@@ -25,8 +26,12 @@ export default function App() {
       <section className="patient_covid_stats">
         <PATIENT_STATS />
       </section>
-      <section className="gender_patient"></section>
-      <section className="group_patient"></section>
+      <section className="gender_patient">
+        <GENDER_PATIENT />
+      </section>
+      <section className="group_patient">
+        <GENDER_PATIENT />
+      </section>
       <section className="informations"></section>
       <section className="poly_division"></section>
     </div>
