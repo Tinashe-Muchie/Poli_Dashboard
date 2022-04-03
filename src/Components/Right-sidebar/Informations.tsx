@@ -1,4 +1,4 @@
-import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { BiDotsHorizontalRounded, BiChevronDown } from "react-icons/bi";
 
 interface monthsIF {
   id: number;
@@ -68,7 +68,9 @@ export const INFORMATION = () => {
         </span>
       </div>
       <div>
-        <ul>{MonthList}</ul>
+        <ul>
+          {MonthList} <BiChevronDown />
+        </ul>
       </div>
     </div>
   );
