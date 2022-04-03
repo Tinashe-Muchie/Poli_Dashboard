@@ -419,3 +419,28 @@ a:active {
   padding: 1em;
   margin-top: 1em;
 }
+
+.information_wrapper {
+  background-color: #fff;
+  font-size: 0.8rem;
+  border: hidden;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.information_wrapper div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.information_wrapper div:first-of-type span:first-of-type {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.information_wrapper div:first-of-type span:last-of-type {
+  border: 0.1em solid var(--left-sidebar-font);
+  border-radius: 0.3em;
+  color: var(--left-sidebar-font);
+}

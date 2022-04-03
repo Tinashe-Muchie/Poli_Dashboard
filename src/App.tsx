@@ -6,7 +6,8 @@ import {
   OVERVIEW,
   PATIENT_STATS,
   SEARCH_BAR,
-  STAFF_INFO
+  STAFF_INFO,
+  INFORMATION
 } from "./Components/index";
 
 export default function App() {
@@ -33,7 +34,9 @@ export default function App() {
       <section className="group_patient">
         <GROUP_PATIENT />
       </section>
-      <section className="informations"></section>
+      <section className="informations">
+        <INFORMATION />
+      </section>
       <section className="poly_division"></section>
     </div>
   );
