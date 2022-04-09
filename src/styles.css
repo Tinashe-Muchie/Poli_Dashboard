@@ -446,7 +446,7 @@ a:active {
 }
 
 .information_wrapper .calendar {
-  max-width: 20em;
+  max-width: 100em;
   margin: auto;
   margin-top: 20px;
   background-color: #d4f7d4;
@@ -455,12 +455,88 @@ a:active {
 }
 
 .react-calendar {
-  width: 20em;
+  width: 30em;
   max-width: 100%;
   background: white;
-  border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
+  border: .1em solid #a0a096;
+  font-family: "Rubik" , Arial, Helvetica, sans-serif;
   line-height: 1.125em;
   display: flex;
   flex-direction: column;
+}
+
+.react-calendar__tile {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.information_wrapper .appointment_list {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+.information_wrapper .tests_tile {
+  background-color: var(--background-blue);
+  margin: 1em 0em;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5em;
+}
+
+.information_wrapper .tests_tile .tests_tile_content {
+  display: flex;
+  padding: .5em;
+  justify-content: flex-start;
+}
+
+.information_wrapper .tests_tile .tests_tile_content > div:last-child {
+  display: flex;
+  flex-direction: column;
+  margin-left: .5em;
+  font-weight: bold;
+}
+
+.information_wrapper .tests_tile .tests_tile_content > div:last-child span {
+  color: var(--left-sidebar-font);
+  font-size: .6rem;
+  text-transform: uppercase;
+  margin: .1em;
+}
+
+.information_wrapper .tests_tile .tests_tile_content > div:last-child span:last-of-type {
+  font-size: .7rem;
+  border: hidden;
+  color: black;
+  text-transform: none;
+}
+
+.information_wrapper .tests_tile .tests_tile_content > div:last-child span:first-child {
+  font-size: .7rem;
+  color: black;
+  text-transform: none;
+}
+
+.information_wrapper .tests_tile .tests_tile_content > div:first-child {
+  color: var(--button-blue);
+  background-color: rgba(132, 140, 207);
+  padding: .5em;
+  font-size: 1.2rem;
+  border-radius: .3em;
+} 
+
+.information_wrapper .tests_tile .tests_tile_content_arrow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8em;
+}
+
+.information_wrapper .tests_tile .tests_tile_content_arrow div:last-child {
+  background-color: var(--button-blue);
+  font-size: 1.2rem;
+  padding: .3em .5em;
+  color: #fff;
+  border-bottom-right-radius: .5em;
+  border-top-left-radius: .5em;
 }
