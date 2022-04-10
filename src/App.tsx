@@ -7,7 +7,8 @@ import {
   PATIENT_STATS,
   SEARCH_BAR,
   STAFF_INFO,
-  INFORMATION
+  INFORMATION,
+  POLY_DIVISION
 } from "./Components/index";
 
 export default function App() {
@@ -37,7 +38,9 @@ export default function App() {
       <section className="informations">
         <INFORMATION />
       </section>
-      <section className="poly_division"></section>
+      <section className="poly_division">
+        <POLY_DIVISION />
+      </section>
     </div>
   );
 }

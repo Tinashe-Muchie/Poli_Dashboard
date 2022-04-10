@@ -445,32 +445,6 @@ a:active {
   color: var(--left-sidebar-font);
 }
 
-.information_wrapper .calendar {
-  max-width: 100em;
-  margin: auto;
-  margin-top: 20px;
-  background-color: #d4f7d4;
-  padding: 10px;
-  border-radius: 3px;
-}
-
-.react-calendar {
-  width: 30em;
-  max-width: 100%;
-  background: white;
-  border: .1em solid #a0a096;
-  font-family: "Rubik" , Arial, Helvetica, sans-serif;
-  line-height: 1.125em;
-  display: flex;
-  flex-direction: column;
-}
-
-.react-calendar__tile {
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-}
-
 .information_wrapper .appointment_list {
   margin-top: 1em;
   font-weight: bold;
@@ -539,4 +513,86 @@ a:active {
   color: #fff;
   border-bottom-right-radius: .5em;
   border-top-left-radius: .5em;
+}
+
+.poly_division_wrapper {
+  background-color: #fff;
+  padding: .9em;
+  border-radius: .5em;
+}
+
+.poly_division_wrapper > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.poly_division_wrapper > div:first-child > span:first-child {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.poly_division_wrapper > div:first-child > span:last-child {
+  border: 0.1em solid var(--left-sidebar-font);
+  border-radius: 0.3em;
+  color: var(--left-sidebar-font);
+}
+
+.poly_division_wrapper .polyclinic_content {
+  display: flex;
+  justify-content: flex-start;
+  margin: .5em 0em;
+  align-items: center;
+}
+
+.poly_division_wrapper .polyclinic_content > div:first-child {
+  padding: .5em;
+  margin: .1em 0;
+  border-radius: .3em;
+}
+.poly_division_wrapper .polyclinic_content .dental {
+  color: rgba(46, 204, 113);
+  background-color: rgba(200, 247, 197);
+}
+
+.poly_division_wrapper .polyclinic_content > div:last-child {
+  display: flex;
+  flex-direction: column;
+  margin-left: .2em;
+  font-size: .8rem;
+}
+
+.poly_division_wrapper .polyclinic_content > div:last-child > span:first-child {
+  font-weight: bold;
+}
+
+.poly_division_wrapper .polyclinic_content > div:last-child > span:last-child {
+  font-size: .7rem;
+  color: var(--left-sidebar-font);
+  margin-top: .4em;
+}
+
+.poly_division_wrapper .polyclinic_content .cardiac {
+  color: rgba(242, 38, 19);
+  background-color: rgba(255, 228, 228);
+}
+
+.poly_division_wrapper .polyclinic_content .radiology {
+  color: var(--button-blue);
+  background-color: var(--background-blue);
+}
+
+.poly_division_wrapper > input {
+  border: hidden;
+  border-radius: .4em;
+  padding: 1em 1.5em;
+  font-size: .6rem;
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 1em;
+  color: rgba(53, 162, 235);
+  background-color: rgba(53, 162, 235, .1);
+  box-shadow: .1em .1em .1em rgba(53, 162, 235); 
 }
