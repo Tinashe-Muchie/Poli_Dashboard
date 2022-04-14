@@ -23,7 +23,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr;
   grid-template-rows: repeat(5, auto);
-  grid-gap: 0.5em;
+  grid-gap: 0.8em;
 }
 
 .left-sidebar {
@@ -77,6 +77,7 @@ body {
   background-color: #fff;
   min-height: 100vh;
   color: var(--left-sidebar-font);
+  height: 100%;
 }
 
 .sidebar_heading {
@@ -426,6 +427,7 @@ a:active {
   border: hidden;
   border-radius: 0.5em;
   padding: 1.5em;
+  height: 100%;
 }
 
 .information_wrapper div:first-of-type {
@@ -448,7 +450,7 @@ a:active {
 .information_wrapper .appointment_list {
   margin-top: 1em;
   font-weight: bold;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .information_wrapper .tests_tile {
@@ -456,38 +458,46 @@ a:active {
   margin: 1em 0em;
   display: flex;
   flex-direction: column;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .information_wrapper .tests_tile .tests_tile_content {
   display: flex;
-  padding: .5em;
+  padding: 0.5em;
   justify-content: flex-start;
 }
 
 .information_wrapper .tests_tile .tests_tile_content > div:last-child {
   display: flex;
   flex-direction: column;
-  margin-left: .5em;
+  margin-left: 0.5em;
   font-weight: bold;
 }
 
 .information_wrapper .tests_tile .tests_tile_content > div:last-child span {
   color: var(--left-sidebar-font);
-  font-size: .6rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
-  margin: .1em;
+  margin: 0.1em;
 }
 
-.information_wrapper .tests_tile .tests_tile_content > div:last-child span:last-of-type {
-  font-size: .7rem;
+.information_wrapper
+  .tests_tile
+  .tests_tile_content
+  > div:last-child
+  span:last-of-type {
+  font-size: 0.7rem;
   border: hidden;
   color: black;
   text-transform: none;
 }
 
-.information_wrapper .tests_tile .tests_tile_content > div:last-child span:first-child {
-  font-size: .7rem;
+.information_wrapper
+  .tests_tile
+  .tests_tile_content
+  > div:last-child
+  span:first-child {
+  font-size: 0.7rem;
   color: black;
   text-transform: none;
 }
@@ -495,30 +505,31 @@ a:active {
 .information_wrapper .tests_tile .tests_tile_content > div:first-child {
   color: var(--button-blue);
   background-color: rgba(132, 140, 207);
-  padding: .5em;
+  padding: 0.5em;
   font-size: 1.2rem;
-  border-radius: .3em;
-} 
+  border-radius: 0.3em;
+}
 
 .information_wrapper .tests_tile .tests_tile_content_arrow {
   display: flex;
   justify-content: space-between;
-  margin-top: .8em;
+  margin-top: 0.8em;
 }
 
 .information_wrapper .tests_tile .tests_tile_content_arrow div:last-child {
   background-color: var(--button-blue);
   font-size: 1.2rem;
-  padding: .3em .5em;
+  padding: 0.3em 0.5em;
   color: #fff;
-  border-bottom-right-radius: .5em;
-  border-top-left-radius: .5em;
+  border-bottom-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
 }
 
 .poly_division_wrapper {
   background-color: #fff;
-  padding: .9em;
-  border-radius: .5em;
+  padding: 0.9em;
+  border-radius: 0.5em;
+  height: 100%;
 }
 
 .poly_division_wrapper > div:first-child {
@@ -530,7 +541,7 @@ a:active {
 
 .poly_division_wrapper > div:first-child > span:first-child {
   font-weight: bold;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .poly_division_wrapper > div:first-child > span:last-child {
@@ -542,14 +553,14 @@ a:active {
 .poly_division_wrapper .polyclinic_content {
   display: flex;
   justify-content: flex-start;
-  margin: .5em 0em;
+  margin: 0.5em 0em;
   align-items: center;
 }
 
 .poly_division_wrapper .polyclinic_content > div:first-child {
-  padding: .5em;
-  margin: .1em 0;
-  border-radius: .3em;
+  padding: 0.5em;
+  margin: 0.1em 0;
+  border-radius: 0.3em;
 }
 .poly_division_wrapper .polyclinic_content .dental {
   color: rgba(46, 204, 113);
@@ -559,8 +570,8 @@ a:active {
 .poly_division_wrapper .polyclinic_content > div:last-child {
   display: flex;
   flex-direction: column;
-  margin-left: .2em;
-  font-size: .8rem;
+  margin-left: 0.2em;
+  font-size: 0.8rem;
 }
 
 .poly_division_wrapper .polyclinic_content > div:last-child > span:first-child {
@@ -568,9 +579,9 @@ a:active {
 }
 
 .poly_division_wrapper .polyclinic_content > div:last-child > span:last-child {
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: var(--left-sidebar-font);
-  margin-top: .4em;
+  margin-top: 0.4em;
 }
 
 .poly_division_wrapper .polyclinic_content .cardiac {
@@ -585,14 +596,14 @@ a:active {
 
 .poly_division_wrapper > input {
   border: hidden;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 1em 1.5em;
-  font-size: .6rem;
+  font-size: 0.6rem;
   display: inline-block;
   width: 100%;
   font-weight: bold;
   margin-top: 1em;
   color: rgba(53, 162, 235);
-  background-color: rgba(53, 162, 235, .1);
-  box-shadow: .1em .1em .1em rgba(53, 162, 235); 
+  background-color: rgba(53, 162, 235, 0.1);
+  box-shadow: 0em 0.1em 0.1em rgba(53, 162, 235);
 }

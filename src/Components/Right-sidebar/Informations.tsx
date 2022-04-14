@@ -2,6 +2,7 @@ import { BiDotsHorizontalRounded, BiChevronDown } from "react-icons/bi";
 import { MdCoronavirus } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { CALENDAR } from "../Calendar";
 
 export const INFORMATION = () => {
   return (
@@ -12,7 +13,9 @@ export const INFORMATION = () => {
           <BiDotsHorizontalRounded />
         </span>
       </div>
-      <div className="calendar"></div>
+      <div className="calendar">
+        <CALENDAR />
+      </div>
       <div className="appointment_list">Appointment List</div>
       <div className="tests_tile">
         <div className="tests_tile_content">
