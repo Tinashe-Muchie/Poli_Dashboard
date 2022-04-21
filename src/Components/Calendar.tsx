@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import { addDays, format, getDate, isSameDay, startOfWeek } from "date-fns";
-
-interface dateIF {
-  id: number;
-  title: string;
-}
 
 interface weekDayIF {
   formatted: string;
@@ -26,7 +20,7 @@ export const getWeekDays = (date: Date): weekDayIF[] => {
   for (let i = 0; i < 7; i++) {
     const date = addDays(start, i);
     final.push({
-      formatted: format(date, "EEEEEE"),
+      formatted: format(date, "EEE"),
       date: date,
       day: getDate(date)
     });
@@ -42,25 +36,29 @@ export const CALENDAR = ({ date, onChange }: Props) => {
     setWeek(weekDays);
   }, [date]);
 
-  const showDate = week.map((weekDay) => (
-    <li key={weekDay.formatted} className="date_list">
-      {weekDay.formatted}
-    </li>
-  ));
-
-  const showDay = week.map((weekDay) => (
-    <li key={weekDay.formatted} className="date_list">
-      {weekDay.day}
-    </li>
-  ));
+  const showDate = week.map((weekDay) => {
+    const sameDay = isSameDay(weekDay.date, date);
+    return sameDay ? (
+      <li key={weekDay.formatted} className="date_list_actual">
+        <span>{weekDay.formatted}</span>
+        <span className="calendar_day">{weekDay.day}</span>
+      </li>
+    ) : (
+      <li
+        key={weekDay.formatted}
+        className="date_list"
+        onClick={() => onChange(weekDay.date)}
+      >
+        <span>{weekDay.formatted}</span>
+        <span className="calendar_day">{weekDay.day}</span>
+      </li>
+    );
+  });
 
   return (
     <div className="calendar_wrapper">
       <div className="date">
         <ul>{showDate}</ul>
-      </div>
-      <div className="date">
-        <ul>{showDay}</ul>
       </div>
     </div>
   );
