@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BiDotsHorizontalRounded, BiChevronDown } from "react-icons/bi";
 import { MdCoronavirus } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
@@ -5,6 +6,8 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { CALENDAR } from "../Calendar";
 
 export const INFORMATION = () => {
+  const [date, setDate] = useState(new Date());
+
   return (
     <div className="information_wrapper">
       <div>
@@ -14,7 +17,7 @@ export const INFORMATION = () => {
         </span>
       </div>
       <div className="calendar">
-        <CALENDAR />
+        <CALENDAR date={date} onChange={(newDate) => setDate(newDate)} />
       </div>
       <div className="appointment_list">Appointment List</div>
       <div className="tests_tile">

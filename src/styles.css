@@ -612,22 +612,16 @@ a:active {
   display: flex;
   flex-direction: column;
   max-width: 20em;
+  background-color: var(--background-blue);
+  margin-top: .5em;
+  border-radius: .5em;
 }
 
-.calendar_wrapper .month > select {
- padding: .5em;
- border: hidden;
-}
-
-.calendar_wrapper .month  span {
-  padding: .5em;
-  border: hidden;
-}
 
 .calendar_wrapper .date > ul {
   display: flex; 
 }
 
 .date_list {
-  padding: .5em;
+  padding: .2em .5em ;
 }

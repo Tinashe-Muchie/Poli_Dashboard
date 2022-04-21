@@ -1,62 +1,66 @@
-import { 
-  FaArrowAltCircleRight,
-  FaArrowAltCircleLeft
-} from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { addDays, format, getDate, isSameDay, startOfWeek } from "date-fns";
 
 interface dateIF {
   id: number;
   title: string;
 }
 
-/*const month: dateIF[] = [
-  {id: 0,title: 'January'},{id: 1,title: 'February'},{id: 2,title: 'March'},{id: 3,title: 'April'},{id: 4,title: 'May'},{id: 5,title: 'June'},{id: 6,title: 'July'},{id: 7,title: 'August'},{id: 8,title: 'September'},{id: 9,title: 'October'},{id: 10,title: 'November'},{id: 11,title: 'December'}
-];*/
+interface weekDayIF {
+  formatted: string;
+  date: Date;
+  day: number;
+}
 
-const date: dateIF[] = [
-  {id: 0,title: 'Mon'},{id: 1,title: 'Tue'},{id: 2,title: 'Wed'},{id: 3,title: 'Thu'},{id: 4,title: 'Fri'},{id: 5,title: 'Sat'},{id: 6,title: 'Sun'}
-];
+type Props = {
+  date: Date;
+  onChange: (value: Date) => void;
+};
 
-/*const showMonth = month.map(month => (
-  <li key={month.id}>
-    {month.title}
-  </li>
-));*/
+//get Week Days function using the date-fns library
+export const getWeekDays = (date: Date): weekDayIF[] => {
+  const start = startOfWeek(date, { weekStartsOn: 1 });
+  const final: weekDayIF[] = [];
 
-const showDate = date.map(date => (
-  <li key={date.id} className="date_list">
-    {date.title}
-  </li>
-));
+  for (let i = 0; i < 7; i++) {
+    const date = addDays(start, i);
+    final.push({
+      formatted: format(date, "EEEEEE"),
+      date: date,
+      day: getDate(date)
+    });
+  }
+  return final;
+};
 
-export const CALENDAR = () => {
-  return(
+export const CALENDAR = ({ date, onChange }: Props) => {
+  const [week, setWeek] = useState<weekDayIF[]>([]);
+
+  useEffect(() => {
+    const weekDays = getWeekDays(date);
+    setWeek(weekDays);
+  }, [date]);
+
+  const showDate = week.map((weekDay) => (
+    <li key={weekDay.formatted} className="date_list">
+      {weekDay.formatted}
+    </li>
+  ));
+
+  const showDay = week.map((weekDay) => (
+    <li key={weekDay.formatted} className="date_list">
+      {weekDay.day}
+    </li>
+  ));
+
+  return (
     <div className="calendar_wrapper">
-      <div className="month">
-        <span>
-          <FaArrowAltCircleLeft />
-        </span>
-        <select name="months">
-          <option value="Jan">January</option>
-          <option value="Feb">February</option>
-          <option value="Mar">March</option>
-          <option value="Apr">April</option>
-          <option value="May">May</option>
-          <option value="Jun">June</option>
-          <option value="Jul">July</option>
-          <option value="Aug">August</option>
-          <option value="Sep">September</option>
-          <option value="Oct">October</option>
-          <option value="Nov">November</option>
-          <option value="Dec">December</option>
-        </select>
-        <span>
-          <FaArrowAltCircleRight />
-        </span>
+      <div className="date">
+        <ul>{showDate}</ul>
       </div>
       <div className="date">
-        <ul>
-          {showDate}
-        </ul>
+        <ul>{showDay}</ul>
       </div>
     </div>
   );
