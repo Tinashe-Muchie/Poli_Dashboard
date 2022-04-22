@@ -155,11 +155,12 @@ ul {
   font-weight: bold;
   box-shadow: 0em 0.2em 0.2em rgba(82, 78, 183);
   cursor: pointer;
+  transition: box-shadow 15s linear;
 }
 
 .sidebar_wrapper .sidebar_tile button:hover {
   border-radius: 0.4em;
-  box-shadow: inset -.0em -.4em 0.2em rgba(82, 78, 183);
+  box-shadow: inset -0em -0.4em 0.2em rgba(82, 78, 183);
 }
 
 .sidebar_wrapper .sidebar_footer {
@@ -312,7 +313,7 @@ ul {
 
 .Overview_wrapper button:hover {
   border-radius: 0.5em;
-  box-shadow: inset 0em -.4em 0.5em 0.2em rgba(82, 78, 183);
+  box-shadow: inset 0em -0.4em 0.5em 0.2em rgba(82, 78, 183);
 }
 
 .staff_info_wrapper {
