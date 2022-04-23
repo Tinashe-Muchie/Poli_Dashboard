@@ -1,4 +1,4 @@
-import "./styles.css";
+ import "./styles.css";
 import {
   GENDER_PATIENT,
   GROUP_PATIENT,

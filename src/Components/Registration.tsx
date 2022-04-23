@@ -1,18 +1,7 @@
 import { useReducer } from 'react';
+import { MdAttractions } from 'react-icons/md';
 
-interface stateIF {
-    first_name: string;
-    last_name: string;
-    title: string;
-    date_of_birth: number | string;
-    mailing_address: number | string;
-    home_phone: number | string;
-    work_phone: number | string;
-    cell_phone: number | string;
-    email_address: number | string;
-}
-
-const initialState:stateIF = {
+const initialState = {
   first_name: '',
   last_name: '',
   title: '',
@@ -38,13 +27,19 @@ type ACTIONTYPE =
 const reducer = (state: typeof initialState, action: ACTIONTYPE) => {
   switch (action.type) {
     case 'first_name':
-      return {first_name: state.first_name}
+      return {first_name: action.payload};
+    case 'last_name':
+      return {last_name: action.payload};
+    case 'title': 
+      return {title: action.payload};
+    default: 
+      throw new Error('Bad input')
   }
 }
 
 export const REGISTRATION = () => {
 
-
+  const [ state, dispatch ] = useReducer(reducer, initialState);
 
   return <div className="registration_wrapper">
     <form>
