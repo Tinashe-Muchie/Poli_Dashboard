@@ -37,20 +37,21 @@ export const REGISTRATION = () => {
         <select {...register("gender", { required: true })}>
           <option value="male">Male</option>
           <option value="female">Female</option>
+          <option value="other">Other</option>
         </select>
-        {errors.gender?.type === "required" && "title is required"}
+        {errors.gender?.type === "required"}
         <input
           {...register("work_phone", { required: true })}
           type="tel"
           placeholder="+263 775 786 980"
         />
-        {errors.work_phone?.type === "required" && "title is required"}
+        <p>{errors.work_phone?.type === "required" && "phone is required"}</p>
         <input
           {...register("email", { required: true })}
           type="email"
           placeholder="tinoe@gmail.com"
         />
-        {errors.email?.type === "required" && "title is required"}
+        <p>{errors.email?.type === "required" && "email is required"}</p>
         <input type="submit" value="Submit" />
       </form>
     </div>
