@@ -14,9 +14,7 @@ import {
 export default function App() {
   return (
     <div className="container">
-      <section className="left-sidebar">
-        <LEFT_SIDEBAR />
-      </section>
+      
       <section className="search-bar">
         <SEARCH_BAR />
       </section>
@@ -40,6 +38,9 @@ export default function App() {
       </section>
       <section className="poly_division">
         <POLY_DIVISION />
+      </section>
+      <section className="left-sidebar">
+        <LEFT_SIDEBAR />
       </section>
     </div>
   );

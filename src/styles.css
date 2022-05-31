@@ -22,62 +22,10 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr;
-    grid-template-rows: repeat(5, auto);
-    grid-gap: 0.8em;
-  }
-  
-  .left-sidebar {
-    grid-column: 1/2;
-    grid-row: 1/6;
-  }
-  
-  .search-bar {
-    grid-column: 2/5;
-    grid-row: 1/2;
-  }
-  
-  .overview {
-    grid-column: 2/5;
-    grid-row: 2/3;
-  }
-  
-  .staff_info {
-    grid-column: 2/4;
-    grid-row: 3/4;
-  }
-  
-  .patient_covid_stats {
-    grid-column: 2/4;
-    grid-row: 4/5;
-  }
-  
-  .gender_patient {
-    grid-column: 2/3;
-    grid-row: 5/6;
-  }
-  
-  .group_patient {
-    grid-column: 3/4;
-    grid-row: 5/6;
-  }
-  
-  .informations {
-    grid-column: 4/5;
-    grid-row: 3/5;
-  }
-  
-  .poly_division {
-    grid-column: 4/5;
-    grid-row: 5/6;
-  }
-}
-
+/*styles for sidebar wrapper */
 .sidebar_wrapper {
   position: relative;
   margin: 0;
@@ -209,6 +157,7 @@ ul {
   font-size: 0.9rem;
 }
 
+/*styles for search bar */
 .Search_bar_wrapper {
   background-color: #fff;
   display: flex;
@@ -218,12 +167,12 @@ ul {
 
 .Search_bar_wrapper form {
   display: flex;
-  padding: 0.5em;
+  padding: 0.2em;
 }
 
 .Search_bar_wrapper form > input {
-  padding: 0.7em;
-  font-size: 0.9rem;
+  padding: 0.2em;
+  font-size: 0.8rem;
   border: 0.1em solid var(--left-sidebar-font);
   border-bottom-left-radius: 5em;
   border-top-left-radius: 5em;
@@ -233,8 +182,9 @@ ul {
   border: 0.1em solid var(--left-sidebar-font);
   border-bottom-right-radius: 5em;
   border-top-right-radius: 5em;
-  padding: 0.7em;
+  padding: 0.2em;
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .Search_bar_wrapper form > select > option {
@@ -250,18 +200,20 @@ ul {
   background-color: var(--background-blue);
   border: hidden;
   border-radius: 50%;
-  padding: 0.4em;
-  margin-right: 0.4em;
+  padding: 0.1em;
+  margin-right: 0.1em;
   color: var(--button-blue);
 }
 
 .Search_bar_wrapper > div .Admin_info {
   display: flex;
   background-color: var(--background-blue);
-  padding: 0.5em;
+  padding: 0.2em;
   border: hidden;
   border-radius: 0.5em;
-  margin-right: 0.6em;
+  margin-right: 0.2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }
 
 .Search_bar_wrapper > div .Admin_info div:first-of-type {
@@ -672,4 +624,83 @@ a:active {
   border: hidden;
   align-self: center;
   padding: 0 0.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 0.8em;
+  }
+
+  .left-sidebar {
+    grid-column: 1/2;
+    grid-row: 1/6;
+  }
+
+  .search-bar {
+    grid-column: 2/5;
+    grid-row: 1/2;
+  }
+
+  .overview {
+    grid-column: 2/5;
+    grid-row: 2/3;
+  }
+
+  .staff_info {
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+
+  .patient_covid_stats {
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+
+  .gender_patient {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  .group_patient {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+
+  .informations {
+    grid-column: 4/5;
+    grid-row: 3/5;
+  }
+
+  .poly_division {
+    grid-column: 4/5;
+    grid-row: 5/6;
+  }
+
+  .Search_bar_wrapper form {
+    padding: 0.5em;
+  }
+
+  .Search_bar_wrapper form > in {
+    padding: 0.7em;
+    font-size: 0.9rem;
+    border-bottom-left-radius: 5em;
+    border-top-left-radius: 5em;
+  }
+
+  .Search_bar_wrapper form > select {
+    padding: 0.7em;
+  }
+
+  .Search_bar_wrapper > div .Admin_info {
+    margin-right: 0.6em;
+    padding: 0.5em;
+  }
+
+  .Search_bar_wrapper > div .Search_bar_bell {
+    padding: 0.4em;
+    margin-right: 0.4em;
+  }
 }
