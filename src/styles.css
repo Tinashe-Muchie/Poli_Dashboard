@@ -27,6 +27,7 @@ body {
 
 /*styles for sidebar wrapper */
 .sidebar_wrapper {
+  display: none;
   position: relative;
   margin: 0;
   padding: 1em;
@@ -34,6 +35,7 @@ body {
   min-height: 100vh;
   color: var(--left-sidebar-font);
   height: 100%;
+  box-shadow: 0 0 .8em black;
 }
 
 .sidebar_heading {
@@ -162,7 +164,7 @@ ul {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  border-bottom-left-radius: 0.5em;
+  box-shadow: 0 0 .8em black;
 }
 
 .Search_bar_wrapper form {
@@ -238,6 +240,7 @@ ul {
   color: var(--left-sidebar-font);
 }
 
+/*styles for overview section*/
 .Overview_wrapper {
   display: flex;
   justify-content: space-between;
@@ -252,20 +255,22 @@ ul {
 
 .Overview_wrapper > div span:first-of-type {
   font-weight: bolder;
+  font-size: .9rem;
 }
 
 .Overview_wrapper > div span:last-of-type {
   color: var(--left-sidebar-font);
+  font-size: .8rem;
 }
 
 .Overview_wrapper button {
-  padding: 0.8em 2em;
+  padding: 0.5em 2em;
   background-color: var(--button-blue);
   border: hidden;
   color: ivory;
   box-shadow: 0em 0.4em 0.2em rgba(82, 78, 183);
   border-radius: 0.3em;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -275,6 +280,7 @@ ul {
   box-shadow: inset 0em -0.4em 0.5em 0.2em rgba(82, 78, 183);
 }
 
+/*staff info section styling*/
 .staff_info_wrapper {
   display: flex;
   justify-content: space-between;
@@ -285,9 +291,10 @@ ul {
   display: flex;
   align-items: center;
   background-color: #fff;
-  padding: 0.7em 2.5em;
+  padding: 0.5em .5em;
   border: hidden;
   border-radius: 0.3em;
+  box-shadow: 0 0 .8em black;
 }
 
 .staff_info_list > span {
@@ -320,11 +327,14 @@ ul {
   font-size: 0.9rem;
 }
 
+/*styling for patient statistics section*/
 .patient_stats_wrapper {
   background-color: #fff;
   padding: 0.8em;
   border: hidden;
   border-radius: 0.5em;
+  margin-bottom: .5em;
+  box-shadow: 0 0 .8em black;
 }
 
 .patient_stats_wrapper > div {
@@ -365,12 +375,15 @@ a:active {
   padding: 1.5em;
 }
 
+/*styling for patients section */
 .patients_wrapper {
   background-color: #fff;
   padding: 0.8em;
   border: hidden;
   border-radius: 0.5em;
   font-size: 0.8rem;
+  box-shadow: 0 0 .8em black;
+  margin-bottom: .5em;
 }
 
 .patients_wrapper > div {
@@ -396,6 +409,7 @@ a:active {
   margin-top: 1em;
 }
 
+/*styles for the information section*/
 .information_wrapper {
   background-color: #fff;
   font-size: 0.8rem;
@@ -403,6 +417,8 @@ a:active {
   border-radius: 0.5em;
   padding: 1.5em;
   height: 100%;
+  box-shadow: 0 0 .8em black;
+  margin-bottom: .5em;
 }
 
 .information_wrapper div:first-of-type {
@@ -500,11 +516,14 @@ a:active {
   border-top-left-radius: 0.5em;
 }
 
+/*styles for the poly division section */
 .poly_division_wrapper {
   background-color: #fff;
   padding: 0.9em;
   border-radius: 0.5em;
   height: 100%;
+  box-shadow: 0 0 .8em black;
+  margin-bottom: .5em;
 }
 
 .poly_division_wrapper > div:first-child {
@@ -679,6 +698,11 @@ a:active {
     grid-row: 5/6;
   }
 
+  .sidebar_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .Search_bar_wrapper form {
     padding: 0.5em;
   }
@@ -702,5 +726,34 @@ a:active {
   .Search_bar_wrapper > div .Search_bar_bell {
     padding: 0.4em;
     margin-right: 0.4em;
+  }
+
+  .Overview_wrapper > div span:first-of-type {
+    font-size: 1rem;
+  }
+  
+  .Overview_wrapper > div span:last-of-type {
+    font-size: 1rem;
+  }
+
+  .Overview_wrapper button {
+    padding: 0.8em 2em;
+    font-size: 0.9rem;
+  }
+
+  .staff_info_list {
+    padding: 0.7em 2.5em;
+  }
+
+  .patient_stats_wrapper {
+    margin-bottom: 0em;
+  }
+
+  .information_wrapper {
+    margin-bottom: 0em;
+  }
+
+  .poly_division_wrapper {
+    margin-bottom: 0;
   }
 }
